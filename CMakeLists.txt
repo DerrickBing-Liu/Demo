@@ -29,12 +29,16 @@ FetchContent_MakeAvailable(googletest)
 # 把原本 main() 之外的业务代码单独做成一个库，供测试和主程序共用
 add_library(demo_lib
     src/Animal.cpp
+  src/AnimalCreation.cpp
     src/Dog.cpp
     src/Horse.cpp
     src/Duck.cpp
     src/AnimalSoundIfElseChain.cpp
     src/AnimalSoundNested.cpp
     src/ProcessAnimalLargeMethod.cpp
+    src/Machine.cpp
+    src/Robot.cpp
+    include/Robot.h
 )
 target_include_directories(demo_lib PUBLIC include)
 

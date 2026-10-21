@@ -2,15 +2,20 @@
 #include <memory>
 
 #include "Animal.h"
+#include "AnimalCreation.h"
 #include "AnimalSoundIfElseChain.h"
 #include "AnimalSoundNested.h"
 #include "Dog.h"
 #include "Duck.h"
 #include "Horse.h"
 #include "ProcessAnimalLargeMethod.h"
+#include "Robot.h"
 #include "main.h"
 
 int main() {
+  Robot robot("Robo", 1, "T-800");
+  robot.speak();
+
   Animal animal("Generic Animal1", 3);
   animal.speak();
 
@@ -32,6 +37,8 @@ int main() {
   PrintNestedAnimalSounds();
 
   ProcessAnimalSounds();
+
+  AnimalCreation();
 
   return 0;
 }
